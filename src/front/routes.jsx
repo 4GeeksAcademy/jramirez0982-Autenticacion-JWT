@@ -11,6 +11,7 @@ import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
 import { Register } from "./pages/Register";
 import { Private_page } from "./pages/Private_page";
+import { Show_private_info } from "./pages/Show_private_info";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -29,6 +30,7 @@ export const router = createBrowserRouter(
         <Route path="/demo" element={<Demo />} />
         <Route path="/register" element={<Register />} />
         <Route path="/private_page" element={<Private_page />} />
+        <Route path="/show_private_info" element={<Show_private_info />} />
       </Route>
     )
 );

@@ -128,6 +128,13 @@ def show_username():
     return jsonify({'msg':'ok', 'name': user.email})
 
 
+@app.route('/my_password', methods = ['GET'])
+@jwt_required()
+def show_password():
+    email_user_current = get_jwt_identity()
+    print(email_user_current)
+    user = User.query.filter_by(email=email_user_current).first()
+    return jsonify({'msg':'ok', 'password': user.password})
 
 
 # this only runs if `$ python src/main.py` is executed

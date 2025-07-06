@@ -30,6 +30,7 @@ export const Register = () => {
             })
             .then((data) => {
                 console.log(data)
+                alert("USUARIO CREADO EXITOSAMENTE")
                 navigate("/")
             })
             .catch((error) => {

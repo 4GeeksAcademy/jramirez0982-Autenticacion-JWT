@@ -25,35 +25,16 @@ export const Navbar = () => {
       <div className="ml-auto">
         {isLogged ? (
           <>
-            <Link to="/private_page" className="btn btn-primary me-2">Mi información privada</Link>
+            <Link to="/show_private_info" 
+			className="btn btn-primary me-2">Mi información privada
+			</Link>
             <button onClick={handleLogout} className="btn btn-danger">Cerrar Sesión</button>
           </>
         ) : (
-          <Link to="/" className="btn btn-success">Iniciar Sesión</Link>
+          <Link to="/" className="btn btn-success">Bienvenido</Link>
         )}
       </div>
     </nav>
   );
 };
 
-
-// import { Link } from "react-router-dom";
-
-// export const Navbar = () => {
-// 	let x = localStorage.getItem("token-jwt")
-// 	console.log(x)
-// 	return (
-// 		<nav className="navbar navbar-light bg-light">
-// 			<div className="container">
-// 				<Link to="/">
-// 					<span className="navbar-brand mb-0 h1">Autenticacion JWT</span>
-// 				</Link>
-// 				<div className="ml-auto">
-// 					<Link to="/demo">
-// 						<button className="btn btn-primary">Iniciar sesion</button>
-// 					</Link>
-// 				</div>
-// 			</div>
-// 		</nav>
-// 	);
-// };
