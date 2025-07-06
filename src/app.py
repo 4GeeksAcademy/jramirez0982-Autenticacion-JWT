@@ -119,9 +119,9 @@ def login():
     return jsonify({'msg': 'ok', 'token':access_token}), 200
 
 
-@app.route('/my_password', methods = ['GET'])
+@app.route('/my_username', methods = ['GET'])
 @jwt_required()
-def show_password():
+def show_username():
     email_user_current = get_jwt_identity()
     print(email_user_current)
     user = User.query.filter_by(email=email_user_current).first()
