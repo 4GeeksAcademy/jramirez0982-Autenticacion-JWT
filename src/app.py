@@ -78,6 +78,7 @@ def serve_any_other_file(path):
     response.cache_control.max_age = 0  # avoid cache memory
     return response
 
+# ESTE ES EL ENDPOINT PARA REGISTRARSE Y CREAR USUARIOS, SE ACCEDE A EL DESDE EL REGISTER.JSX 
 @app.route('/create_user', methods = ['POST'])
 def create_user():
     body = request.get_json(silent=True)
@@ -97,7 +98,7 @@ def create_user():
     db.session.commit()
     return jsonify({'msg': 'ok', 'user': new_user.serialize()})
 
-
+# ESTE ES EL ENDPOINT PARA HACER LOGIN E INGRESAR A INFORMACION PRIVADA, SE ACCEDE A EL DESDE EL HOME.JSX
 @app.route('/login', methods = ['POST'])
 def login():
     body = request.get_json(silent = True)
